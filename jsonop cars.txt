@@ -1,0 +1,204 @@
+db.cars.insert({
+ "maker": "Tata",
+ "model": "Nexon",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Turbocharged",
+ "cc": 1199,
+ "torque": "170 Nm"
+ },
+ "features": [
+ "Touchscreen",
+ "Reverse Camera",
+ "Bluetooth Connectivity"
+ ],
+ "sunroof": false,
+ "airbags": 2
+ })
+
+output
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a02bcf5058e418794979115')
+  }
+}
+
+
+code 
+
+db.cars.insertmany([
+ {
+ "maker": "Hyundai",
+ "model": "Creta",
+ "fuel_type": "Diesel",
+ "transmission": "Manual",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1493,
+ "torque": "250 Nm"
+ },
+ "features": [
+ "Sunroof",
+ "Leather Seats",
+ "Wireless Charging",
+"Ventilated Seats",
+"Bluetooth"
+ ],
+ "sunroof": true,
+ "airbags": 6
+ },
+ {
+ "maker": "Maruti Suzuki",
+ "model": "Baleno",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1197,
+ "torque": "113 Nm"
+ },
+ "features": [
+ "Projector Headlamps",
+ "Apple CarPlay",
+ "ABS"
+ ],
+ "sunroof": false,
+ "airbags": 2
+ },
+ {
+ "maker": "Mahindra",
+ "model": "XUV500",
+ "fuel_type": "Diesel",
+ "transmission": "Manual",
+ "engine": {
+ "type": "Turbocharged",
+ "cc": 2179,
+ "torque": "360 Nm"
+ },
+ "features": [
+ "All-Wheel Drive",
+ "Navigation System",
+ "Cruise Control"
+ ],
+ "sunroof": true,
+ "airbags": 6
+ },
+ {
+ "maker": "Honda",
+ "model": "City",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1498,
+ "torque": "145 Nm"
+ },
+ "features": [
+ "Keyless Entry",
+ "Auto AC",
+ "Multi-angle Rearview Camera"
+ ],
+ "sunroof": false,
+ "airbags": 4
+ }
+]
+)
+
+output:-
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a02bde6058e418794979116'),
+    '1': ObjectId('6a02bde6058e418794979117'),
+    '2': ObjectId('6a02bde6058e418794979118'),
+    '3': ObjectId('6a02bde6058e418794979119')
+  }
+
+
+
+code:-
+
+db.cars.find({"maker":"Hyundai"})
+ 
+output:-
+_id: ObjectId('6a02bde6058e418794979116'),
+  maker: 'Hyundai',
+  model: 'Creta',
+  fuel_type: 'Diesel',
+  transmission: 'Manual',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1493,
+    torque: '250 Nm'
+  },
+  features: [
+    'Sunroof',
+    'Leather Seats',
+    'Wireless Charging',
+    'Ventilated Seats',
+    'Bluetooth'
+  ],
+  sunroof: true,
+  airbags: 6
+}
+
+
+code:-
+db.cars.find({"fuel_type":"Petrol"})
+ output:-
+
+_id: ObjectId('6a02bcf5058e418794979115'),
+  maker: 'Tata',
+  model: 'Nexon',
+  fuel_type: 'Petrol',
+  transmission: 'Automatic',
+  engine: {
+    type: 'Turbocharged',
+    cc: 1199,
+    torque: '170 Nm'
+  },
+  features: [
+    'Touchscreen',
+    'Reverse Camera',
+    'Bluetooth Connectivity'
+  ],
+  sunroof: false,
+  airbags: 2
+}
+ 
+code:-
+db.cars.find({"$or":[{"maker":"Honda"},{"maker":"Hyundai"}]})
+
+output:-
+_id: ObjectId('6a02bde6058e418794979116'),
+  maker: 'Hyundai',
+  model: 'Creta',
+  fuel_type: 'Diesel',
+  transmission: 'Manual',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1493,
+    torque: '250 Nm'
+  },
+  features: [
+    'Sunroof',
+    'Leather Seats',
+    'Wireless Charging',
+    'Ventilated Seats',
+    'Bluetooth'
+  ],
+  sunroof: true,
+  airbags: 6
+}
+
+
+
+
+
+
+
+
