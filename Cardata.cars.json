@@ -1,0 +1,107 @@
+[{
+  "_id": {
+    "$oid": "6a02bcf5058e418794979115"
+  },
+  "maker": "Tata",
+  "model": "Nexon",
+  "fuel_type": "Hybrid",
+  "transmission": "Automatic",
+  "engine": {
+    "type": "Turbocharged",
+    "cc": 1199,
+    "torque": "170 Nm"
+  },
+  "features": [
+    "Touchscreen",
+    "Reverse Camera",
+    "Bluetooth Connectivity"
+  ],
+  "sunroof": false,
+  "airbags": 2
+},
+{
+  "_id": {
+    "$oid": "6a02bde6058e418794979116"
+  },
+  "maker": "Hyundai",
+  "model": "Creta",
+  "fuel_type": "Diesel",
+  "transmission": "Manual",
+  "engine": {
+    "type": "Naturally Aspirated",
+    "cc": 1493,
+    "torque": "250 Nm"
+  },
+  "features": [
+    "Sunroof",
+    "Leather Seats",
+    "Wireless Charging",
+    "Ventilated Seats",
+    "Bluetooth"
+  ],
+  "sunroof": true,
+  "airbags": 6
+},
+{
+  "_id": {
+    "$oid": "6a02bde6058e418794979117"
+  },
+  "maker": "Maruti Suzuki",
+  "model": "Baleno",
+  "fuel_type": "Hybrid",
+  "transmission": "Automatic",
+  "engine": {
+    "type": "Naturally Aspirated",
+    "cc": 1197,
+    "torque": "113 Nm"
+  },
+  "features": [
+    "Projector Headlamps",
+    "Apple CarPlay",
+    "ABS"
+  ],
+  "sunroof": false,
+  "airbags": 2
+},
+{
+  "_id": {
+    "$oid": "6a02bde6058e418794979118"
+  },
+  "maker": "Mahindra",
+  "model": "XUV500",
+  "fuel_type": "Diesel",
+  "transmission": "Manual",
+  "engine": {
+    "type": "Turbocharged",
+    "cc": 2179,
+    "torque": "360 Nm"
+  },
+  "features": [
+    "All-Wheel Drive",
+    "Navigation System",
+    "Cruise Control"
+  ],
+  "sunroof": true,
+  "airbags": 6
+},
+{
+  "_id": {
+    "$oid": "6a02bde6058e418794979119"
+  },
+  "maker": "Honda",
+  "model": "City",
+  "fuel_type": "Hybrid",
+  "transmission": "Automatic",
+  "engine": {
+    "type": "Naturally Aspirated",
+    "cc": 1498,
+    "torque": "145 Nm"
+  },
+  "features": [
+    "Keyless Entry",
+    "Auto AC",
+    "Multi-angle Rearview Camera"
+  ],
+  "sunroof": false,
+  "airbags": 4
+}]

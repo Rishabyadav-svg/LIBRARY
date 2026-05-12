@@ -1,0 +1,669 @@
+db.cars.insert({
+ "maker": "Tata",
+ "model": "Nexon",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Turbocharged",
+ "cc": 1199,
+ "torque": "170 Nm"
+ },
+ "features": [
+ "Touchscreen",
+ "Reverse Camera",
+ "Bluetooth Connectivity"
+ ],
+ "sunroof": false,
+ "airbags": 2
+ })
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a02bcf5058e418794979115')
+  }
+}
+db.cars.insertmany([
+ {
+ "maker": "Hyundai",
+ "model": "Creta",
+ "fuel_type": "Diesel",
+ "transmission": "Manual",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1493,
+ "torque": "250 Nm"
+ },
+ "features": [
+ "Sunroof",
+ "Leather Seats",
+ "Wireless Charging",
+"Ventilated Seats",
+"Bluetooth"
+ ],
+ "sunroof": true,
+ "airbags": 6
+ },
+ {
+ "maker": "Maruti Suzuki",
+ "model": "Baleno",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1197,
+ "torque": "113 Nm"
+ },
+ "features": [
+ "Projector Headlamps",
+ "Apple CarPlay",
+ "ABS"
+ ],
+ "sunroof": false,
+ "airbags": 2
+ },
+ {
+ "maker": "Mahindra",
+ "model": "XUV500",
+ "fuel_type": "Diesel",
+ "transmission": "Manual",
+ "engine": {
+ "type": "Turbocharged",
+ "cc": 2179,
+ "torque": "360 Nm"
+ },
+ "features": [
+ "All-Wheel Drive",
+ "Navigation System",
+ "Cruise Control"
+ ],
+ "sunroof": true,
+ "airbags": 6
+ },
+ {
+ "maker": "Honda",
+ "model": "City",
+ "fuel_type": "Petrol",
+ "transmission": "Automatic",
+ "engine": {
+ "type": "Naturally Aspirated",
+ "cc": 1498,
+ "torque": "145 Nm"
+ },
+ "features": [
+ "Keyless Entry",
+ "Auto AC",
+ "Multi-angle Rearview Camera"
+ ],
+ "sunroof": false,
+ "airbags": 4
+ }
+]
+)
+TypeError: db.cars.insertmany is not a function
+db.cars.insertMany([{"maker": "Hyundai",
+
+ "model": "Creta",
+
+ "fuel_type": "Diesel",
+
+ "transmission": "Manual",
+
+ "engine": {
+
+ "type": "Naturally Aspirated",
+
+ "cc": 1493,
+
+ "torque": "250 Nm"
+
+ },
+
+ "features": [
+
+ "Sunroof",
+
+ "Leather Seats",
+
+ "Wireless Charging",
+
+"Ventilated Seats",
+
+"Bluetooth"
+
+ ],
+
+ "sunroof": true,
+
+ "airbags": 6
+
+ },
+
+ {
+
+ "maker": "Maruti Suzuki",
+
+ "model": "Baleno",
+
+ "fuel_type": "Petrol",
+
+ "transmission": "Automatic",
+
+ "engine": {
+
+ "type": "Naturally Aspirated",
+
+ "cc": 1197,
+
+ "torque": "113 Nm"
+
+ },
+
+ "features": [
+
+ "Projector Headlamps",
+
+ "Apple CarPlay",
+
+ "ABS"
+
+ ],
+
+ "sunroof": false,
+
+ "airbags": 2
+
+ },
+
+ {
+
+ "maker": "Mahindra",
+
+ "model": "XUV500",
+
+ "fuel_type": "Diesel",
+
+ "transmission": "Manual",
+
+ "engine": {
+
+ "type": "Turbocharged",
+
+ "cc": 2179,
+
+ "torque": "360 Nm"
+
+ },
+
+ "features": [
+
+ "All-Wheel Drive",
+
+ "Navigation System",
+
+ "Cruise Control"
+
+ ],
+
+ "sunroof": true,
+
+ "airbags": 6
+
+ },
+
+ {
+
+ "maker": "Honda",
+
+ "model": "City",
+
+ "fuel_type": "Petrol",
+
+ "transmission": "Automatic",
+
+ "engine": {
+
+ "type": "Naturally Aspirated",
+
+ "cc": 1498,
+
+ "torque": "145 Nm"
+
+ },
+
+ "features": [
+
+ "Keyless Entry",
+
+ "Auto AC",
+
+ "Multi-angle Rearview Camera"
+
+ ],
+
+ "sunroof": false,
+
+ "airbags": 4 }])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a02bde6058e418794979116'),
+    '1': ObjectId('6a02bde6058e418794979117'),
+    '2': ObjectId('6a02bde6058e418794979118'),
+    '3': ObjectId('6a02bde6058e418794979119')
+  }
+}
+db.cars.find({"makers":"Hyundai"})
+db.cars.find({"maker":"Hyundai"})
+{
+  _id: ObjectId('6a02bde6058e418794979116'),
+  maker: 'Hyundai',
+  model: 'Creta',
+  fuel_type: 'Diesel',
+  transmission: 'Manual',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1493,
+    torque: '250 Nm'
+  },
+  features: [
+    'Sunroof',
+    'Leather Seats',
+    'Wireless Charging',
+    'Ventilated Seats',
+    'Bluetooth'
+  ],
+  sunroof: true,
+  airbags: 6
+}
+db.cars.finf({"fuel_type":"Petrol"})
+TypeError: db.cars.finf is not a function
+db.cars.find({"fuel_type":"Petrol"})
+{
+  _id: ObjectId('6a02bcf5058e418794979115'),
+  maker: 'Tata',
+  model: 'Nexon',
+  fuel_type: 'Petrol',
+  transmission: 'Automatic',
+  engine: {
+    type: 'Turbocharged',
+    cc: 1199,
+    torque: '170 Nm'
+  },
+  features: [
+    'Touchscreen',
+    'Reverse Camera',
+    'Bluetooth Connectivity'
+  ],
+  sunroof: false,
+  airbags: 2
+}
+{
+  _id: ObjectId('6a02bde6058e418794979117'),
+  maker: 'Maruti Suzuki',
+  model: 'Baleno',
+  fuel_type: 'Petrol',
+  transmission: 'Automatic',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1197,
+    torque: '113 Nm'
+  },
+  features: [
+    'Projector Headlamps',
+    'Apple CarPlay',
+    'ABS'
+  ],
+  sunroof: false,
+  airbags: 2
+}
+{
+  _id: ObjectId('6a02bde6058e418794979119'),
+  maker: 'Honda',
+  model: 'City',
+  fuel_type: 'Petrol',
+  transmission: 'Automatic',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1498,
+    torque: '145 Nm'
+  },
+  features: [
+    'Keyless Entry',
+    'Auto AC',
+    'Multi-angle Rearview Camera'
+  ],
+  sunroof: false,
+  airbags: 4
+}
+db.cars.find({"$and":[{"fuel_type":"Diesel"},{"sunroof":true}]})
+{
+  _id: ObjectId('6a02bde6058e418794979116'),
+  maker: 'Hyundai',
+  model: 'Creta',
+  fuel_type: 'Diesel',
+  transmission: 'Manual',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1493,
+    torque: '250 Nm'
+  },
+  features: [
+    'Sunroof',
+    'Leather Seats',
+    'Wireless Charging',
+    'Ventilated Seats',
+    'Bluetooth'
+  ],
+  sunroof: true,
+  airbags: 6
+}
+{
+  _id: ObjectId('6a02bde6058e418794979118'),
+  maker: 'Mahindra',
+  model: 'XUV500',
+  fuel_type: 'Diesel',
+  transmission: 'Manual',
+  engine: {
+    type: 'Turbocharged',
+    cc: 2179,
+    torque: '360 Nm'
+  },
+  features: [
+    'All-Wheel Drive',
+    'Navigation System',
+    'Cruise Control'
+  ],
+  sunroof: true,
+  airbags: 6
+}
+db.cars.find({"$or":[{"maker":"Honda"},{"maker":"Hyundai"}]})
+{
+  _id: ObjectId('6a02bde6058e418794979116'),
+  maker: 'Hyundai',
+  model: 'Creta',
+  fuel_type: 'Diesel',
+  transmission: 'Manual',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1493,
+    torque: '250 Nm'
+  },
+  features: [
+    'Sunroof',
+    'Leather Seats',
+    'Wireless Charging',
+    'Ventilated Seats',
+    'Bluetooth'
+  ],
+  sunroof: true,
+  airbags: 6
+}
+{
+  _id: ObjectId('6a02bde6058e418794979119'),
+  maker: 'Honda',
+  model: 'City',
+  fuel_type: 'Petrol',
+  transmission: 'Automatic',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1498,
+    torque: '145 Nm'
+  },
+  features: [
+    'Keyless Entry',
+    'Auto AC',
+    'Multi-angle Rearview Camera'
+  ],
+  sunroof: false,
+  airbags: 4
+}
+db.cars.find({"maker":{"$in":["Honda","Mahindra"]}})
+{
+  _id: ObjectId('6a02bde6058e418794979118'),
+  maker: 'Mahindra',
+  model: 'XUV500',
+  fuel_type: 'Diesel',
+  transmission: 'Manual',
+  engine: {
+    type: 'Turbocharged',
+    cc: 2179,
+    torque: '360 Nm'
+  },
+  features: [
+    'All-Wheel Drive',
+    'Navigation System',
+    'Cruise Control'
+  ],
+  sunroof: true,
+  airbags: 6
+}
+{
+  _id: ObjectId('6a02bde6058e418794979119'),
+  maker: 'Honda',
+  model: 'City',
+  fuel_type: 'Petrol',
+  transmission: 'Automatic',
+  engine: {
+    type: 'Naturally Aspirated',
+    cc: 1498,
+    torque: '145 Nm'
+  },
+  features: [
+    'Keyless Entry',
+    'Auto AC',
+    'Multi-angle Rearview Camera'
+  ],
+  sunroof: false,
+  airbags: 4
+}
+db.cars.updateone({"model":"Creta"},{"$set":{"price":1800000}})
+TypeError: db.cars.updateone is not a function
+db.cars.updateMany({"fuel_type":"Petrol"},{"$set":{"fuel_type":"Hybrid"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+db.createCollection("users")
+{ ok: 1 }
+show dbs;
+Cardata              76.00 KiB
+admin                40.00 KiB
+config              104.00 KiB
+local                72.00 KiB
+movie_sales_system   76.00 KiB
+show collections;
+cars
+users
+db.users.insertmany( [
+    {
+        "_id": "user1",
+        "name": "Amit Sharma",
+        "email": "amit.sharma@example.com",
+        "phone": "+91-987654210",
+        "address": "MG Road, Mumbai, Maharashtra"
+    },
+    {
+        "_id": "user2",
+        "name": "Priya Verma",
+        "email": "priya.verma@example.com",
+        "phone": "+91-987654211",
+        "address": "Nehru Place, New Delhi, Delhi"
+    },
+    {
+        "_id": "user3",
+        "name": "Rahul Singh",
+        "email": "rahul.singh@example.com",
+        "phone": "+91-987654212",
+        "address": "Sector 18, Noida, Uttar Pradesh"
+    },
+    {
+        "_id": "user4",
+        "name": "Anjali Nair",
+        "email": "anjali.nair@example.com",
+        "phone": "+91-987654213",
+        "address": "Marine Drive, Kochi, Kerala"
+    },
+    {
+        "_id": "user5",
+        "name": "Vikram Desai",
+        "email": "vikram.desai@example.com",
+        "phone": "+91-987654214",
+        "address": "Park Street, Kolkata, West Bengal"
+    }
+])
+TypeError: db.users.insertmany is not a function
+db.users.insertMany([
+    {
+        "_id": "user1",
+        "name": "Amit Sharma",
+        "email": "amit.sharma@example.com",
+        "phone": "+91-987654210",
+        "address": "MG Road, Mumbai, Maharashtra"
+    },
+    {
+        "_id": "user2",
+        "name": "Priya Verma",
+        "email": "priya.verma@example.com",
+        "phone": "+91-987654211",
+        "address": "Nehru Place, New Delhi, Delhi"
+    },
+    {
+        "_id": "user3",
+        "name": "Rahul Singh",
+        "email": "rahul.singh@example.com",
+        "phone": "+91-987654212",
+        "address": "Sector 18, Noida, Uttar Pradesh"
+    },
+    {
+        "_id": "user4",
+        "name": "Anjali Nair",
+        "email": "anjali.nair@example.com",
+        "phone": "+91-987654213",
+        "address": "Marine Drive, Kochi, Kerala"
+    },
+    {
+        "_id": "user5",
+        "name": "Vikram Desai",
+        "email": "vikram.desai@example.com",
+        "phone": "+91-987654214",
+        "address": "Park Street, Kolkata, West Bengal"
+    }
+])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': 'user1',
+    '1': 'user2',
+    '2': 'user3',
+    '3': 'user4',
+    '4': 'user5'
+  }
+}
+db.users.aggregate([{$project:{name:1,}}])
+{
+  _id: 'user1',
+  name: 'Amit Sharma'
+}
+{
+  _id: 'user2',
+  name: 'Priya Verma'
+}
+{
+  _id: 'user3',
+  name: 'Rahul Singh'
+}
+{
+  _id: 'user4',
+  name: 'Anjali Nair'
+}
+{
+  _id: 'user5',
+  name: 'Vikram Desai'
+}
+db.users.aggregate([{$match:{address:{$regex:"Delhi"}}}])
+{
+  _id: 'user2',
+  name: 'Priya Verma',
+  email: 'priya.verma@example.com',
+  phone: '+91-987654211',
+  address: 'Nehru Place, New Delhi, Delhi'
+}
+db.users.aggregate([{$group:{_id:"$address",totalusers:{$sum:1}}}])
+{
+  _id: 'Nehru Place, New Delhi, Delhi',
+  totalusers: 1
+}
+{
+  _id: 'MG Road, Mumbai, Maharashtra',
+  totalusers: 1
+}
+{
+  _id: 'Sector 18, Noida, Uttar Pradesh',
+  totalusers: 1
+}
+{
+  _id: 'Park Street, Kolkata, West Bengal',
+  totalusers: 1
+}
+{
+  _id: 'Marine Drive, Kochi, Kerala',
+  totalusers: 1
+}
+db.users.aggregate([{$match:{address:{$regex:"Maharashtra"}}},{$project:{name:1,email:1,_id:0}},{$sort:{name:1}}])
+{
+  name: 'Amit Sharma',
+  email: 'amit.sharma@example.com'
+}
+db.createCollection("orders")
+{ ok: 1 }
+show dbs;
+Cardata             116.00 KiB
+admin                40.00 KiB
+config              104.00 KiB
+local                72.00 KiB
+movie_sales_system   76.00 KiB
+show collections;
+cars
+orders
+users
+db.orders.insertMany([
+    {
+        "_id": "order1",
+        "user_id": "user1",
+        "product": "Laptop",
+        "amount": 50000,
+        "order_date": "2024-08-01"
+    },
+    {
+        "_id": "order2",
+        "user_id": "user2",
+        "product": "Mobile Phone",
+        "amount": 15000,
+        "order_date": "2024-08-05"
+    },
+    {
+        "_id": "order3",
+        "user_id": "user1",
+        "product": "Headphones",
+        "amount": 2000,
+        "order_date": "2024-08-10"
+    },
+    {
+        "_id": "order4",
+        "user_id": "user3",
+        "product": "Tablet",
+        "amount": 25000,
+        "order_date": "2024-08-12"
+    },
+    {
+        "_id": "order5",
+        "user_id": "user4",
+        "product": "Smart Watch",
+        "amount": 8000,
+        "order_date": "2024-08-15"
+    }
+] )
