@@ -1,0 +1,71 @@
+body{
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+
+
+}
+.My-profile{
+    display: flex;
+    justify-self: center;
+}
+header{
+    justify-content: center;
+}
+.card{
+    background: rgb(243, 239, 239);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0,1);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+h1{
+    text-align: center;
+    background-color: cornsilk;
+    border-radius: 30px;
+    
+}
+h2{
+    background-color: azure;
+}
+img{
+    width: 200px;
+    height: 200px;
+     border-radius: 50%;
+     object-fit: cover;
+     display: block;
+
+}
+.skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+    
+}
+.Skills{
+    background-color: lightblue;
+    padding: 15px;
+    border-radius:10px;
+    width: 220px;
+    border: 2px solid;
+    margin-bottom: 15px;
+
+    
+}
+.Qualification{
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+h3{
+    
+}
